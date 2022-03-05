@@ -74,7 +74,7 @@ const NavContainer = styled.div<{ open: boolean }>`
   }
 `;
 
-const CloseBtn = styled.button`
+const MenuBtn = styled.button`
   cursor: pointer;
   width: 30px;
   position: fixed;
@@ -87,7 +87,7 @@ const CloseBtn = styled.button`
 `;
 
 const NavBar = () => {
-  const [navOpen, setNavOpen] = useState(true);
+  const [navOpen, setNavOpen] = useState<boolean>(true);
 
   const closeNav = () => {
     setNavOpen((prev) => !prev);
@@ -95,9 +95,9 @@ const NavBar = () => {
 
   return (
     <>
-      <CloseBtn onClick={closeNav}>
+      <MenuBtn onClick={closeNav}>
         <FontAwesomeIcon icon={faBars} />
-      </CloseBtn>
+      </MenuBtn>
       <NavContainer open={navOpen}>
         <NavLink to={"/"}>Intro</NavLink>
         <NavLink to={"/skill-career"}>Skill&Carrer</NavLink>

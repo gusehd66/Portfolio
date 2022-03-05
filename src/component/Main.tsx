@@ -7,9 +7,10 @@ import SkillAndCareer from "../Routes/SkillAndCareer/SkillAndCareer";
 const MainContainer = styled.div`
   width: 100%;
   border-left: double 6px #000;
-  background-color: #fff5d3;
-  height: 100vh;
-  padding-left: 100px;
+  background-color: #f4f4f4;
+  height: 100%;
+  min-height: 100vh;
+  padding: 0 40px;
   position: relative;
   &::after {
     content: "";
