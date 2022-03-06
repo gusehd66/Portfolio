@@ -1,3 +1,4 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
@@ -59,7 +60,7 @@ const Contents = styled.div`
   @media screen and (max-width: 720px) {
     min-height: 240px;
     > .contents-title {
-      width: 350px;
+      width: 250px;
       height: 40px;
       font-size: 24px;
       padding: 8px 16px;
@@ -84,8 +85,9 @@ interface UserModel {
   value: string;
 }
 
+// 받을 props 타입
 interface Props {
-  icon: any;
+  icon: IconProp;
   index: number;
   title: string;
   data: Array<UserModel>;
@@ -102,7 +104,7 @@ const ContentsBox = (props: Props) => {
       </div>
       <ul className="contents-details">
         {props.data.map((user) => (
-          <li>
+          <li key={user.id}>
             {user.id === "Github" || user.id === "Blog" ? (
               <a target="_blank" rel="noopener noreferrer" href={user.value}>
                 {user.id} | <span>{user.value}</span>

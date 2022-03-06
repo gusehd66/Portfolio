@@ -1,15 +1,23 @@
 import { BrowserRouter } from "react-router-dom";
+import styled from "styled-components";
 import Main from "./component/Main";
 import NavBar from "./component/NavBar";
 
+const AppContainer = styled.div`
+  display: flex;
+  width: "100vw";
+  box-sizing: border-box;
+  max-width: 100%;
+`;
+
 function App() {
   return (
-    <div style={{ display: "flex" }}>
+    <AppContainer>
       <BrowserRouter>
         <NavBar />
         <Main />
       </BrowserRouter>
-    </div>
+    </AppContainer>
   );
 }
 

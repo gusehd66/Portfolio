@@ -1,13 +1,7 @@
 import styled from "styled-components";
+import { Container } from "../../styles/common";
 
-const ProjectsContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px;
-`;
+const ProjectsContainer = styled(Container)``;
 
 const Projects = () => {
   return <ProjectsContainer>projects</ProjectsContainer>;

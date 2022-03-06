@@ -1,12 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import { navActions } from "../redux/store/nav_reducer";
+import { RootState } from "../redux/store/store";
 
 const NavContainer = styled.div<{ open: boolean }>`
   width: ${(props) => (props.open ? "180px" : "0")};
-  position: relative;
+  position: fixed;
+  z-index: 9;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -72,6 +75,13 @@ const NavContainer = styled.div<{ open: boolean }>`
       font-weight: 600;
     }
   }
+
+  @media screen and (max-width: 720px) {
+    width: ${(props) => (props.open ? "120px" : "0")};
+    > a {
+      font-size: 16px;
+    }
+  }
 `;
 
 const MenuBtn = styled.button`
@@ -87,18 +97,19 @@ const MenuBtn = styled.button`
 `;
 
 const NavBar = () => {
-  const [navOpen, setNavOpen] = useState<boolean>(true);
+  const dispatch = useDispatch();
+  const { open } = useSelector((state: RootState) => state.nav);
 
-  const closeNav = () => {
-    setNavOpen((prev) => !prev);
+  const toggleNav = () => {
+    dispatch(navActions.navToggle({ open: !open }));
   };
 
   return (
     <>
-      <MenuBtn onClick={closeNav}>
+      <MenuBtn onClick={toggleNav}>
         <FontAwesomeIcon icon={faBars} />
       </MenuBtn>
-      <NavContainer open={navOpen}>
+      <NavContainer open={open}>
         <NavLink to={"/"}>Intro</NavLink>
         <NavLink to={"/skill-career"}>Skill&Carrer</NavLink>
         <NavLink to={"/projects"}>Projects</NavLink>

@@ -9,14 +9,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ContentsBox from "../../component/Common/ContentsBox";
 import { Certificate, Contact, Profile } from "../../data/data";
+import { Container } from "../../styles/common";
 
-const IntroContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px;
+export const IntroContainer = styled(Container)`
   > .medal {
     position: relative;
     margin-bottom: 32px;
@@ -42,7 +37,7 @@ const IntroContainer = styled.div`
       transition: 1s;
       backface-visibility: hidden;
     }
-    > img {
+    > .front {
       transform: rotateY(0deg);
       position: absolute;
     }
@@ -59,7 +54,7 @@ const IntroContainer = styled.div`
       font-weight: 600;
     }
     &:hover {
-      > img {
+      > .front {
         transform: rotateY(-180deg);
       }
       > .back {
@@ -126,7 +121,7 @@ const Intro = () => {
         <div className="hover-please">
           <FontAwesomeIcon icon={faArrowPointer} />
         </div>
-        <img className="medal-item" src="/pp_profile.jpg" alt="profile" />
+        <img className="medal-item front" src="/pp_profile.jpg" alt="profile" />
         <div className="medal-item back">
           항상 어제보다 발전하는 프론트엔드 개발자가 되고 싶은 김현동입니다.
         </div>
