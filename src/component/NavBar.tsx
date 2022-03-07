@@ -30,6 +30,16 @@ const NavContainer = styled.div<{ open: boolean }>`
     border-radius: 30px 0px 0px 30px;
     transition: 0.2s;
     line-height: 35px;
+    &:hover {
+      color: #fff;
+      font-weight: 600;
+    }
+    &.active {
+      color: #fff;
+      z-index: 1;
+      font-weight: 600;
+      box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
+    }
     &:nth-of-type(1) {
       background-color: #fddef3;
       border: solid 1px #ff6bcd;
@@ -64,15 +74,6 @@ const NavContainer = styled.div<{ open: boolean }>`
       &:hover {
         background-color: #4edf6b;
       }
-    }
-    &:hover {
-      color: #fff;
-      font-weight: 600;
-    }
-    &.active {
-      color: #fff;
-      z-index: 1;
-      font-weight: 600;
     }
   }
 

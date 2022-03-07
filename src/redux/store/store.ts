@@ -9,5 +9,5 @@ const store = configureStore({
 
 export default store;
 
-//root reducer의 반환값
+//root reducer의 반환타입
 export type RootState = ReturnType<typeof store.getState>;
