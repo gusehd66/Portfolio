@@ -22,8 +22,8 @@ const Contents = styled.div`
   }
   > .contents-details {
     font-size: 24px;
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     list-style: none;

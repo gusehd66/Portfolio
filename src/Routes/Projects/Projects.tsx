@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "../../styles/common";
+import Container from "../../component/Common/Container";
 
 const ProjectsContainer = styled(Container)``;
 

@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ContentsBox from "../../component/Common/ContentsBox";
 import { Certificate, Contact, Profile } from "../../assets/data/data";
-import { Container } from "../../styles/common";
+import Container from "../../component/Common/Container";
 import profile from "../../assets/img/pp_profile.jpg";
 
 export const IntroContainer = styled(Container)`
@@ -62,20 +62,21 @@ export const IntroContainer = styled(Container)`
         transform: rotateY(0deg);
       }
     }
-  }
 
-  @media screen and (max-width: 720px) {
-    > img {
-      width: 250px;
+    @media screen and (max-width: 720px) {
+      > .medal-item {
+        width: 250px;
+        height: 250px;
+      }
     }
-  }
 
-  @keyframes pong {
-    0% {
-      bottom: 0px;
-    }
-    100% {
-      bottom: 5px;
+    @keyframes pong {
+      0% {
+        bottom: 0px;
+      }
+      100% {
+        bottom: 5px;
+      }
     }
   }
 `;
