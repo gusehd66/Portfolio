@@ -31,21 +31,18 @@ const MainContainer = styled.div<{ open: boolean }>`
     transform: rotateY(90deg);
     transition: all 0.5s ease-in;
   }
-
   .pageSlider-enter-active {
     opacity: 1;
     transform: rotateY(0);
     transform-origin: 100% 0%;
     transition: all 0.5s ease-in;
   }
-
   .pageSlider-exit {
     opacity: 1;
     transition: all 0.5s ease-in;
   }
-
   .pageSlider-exit-active {
-    opacity: 0;
+    opacity: 1;
     transition: all 0.5s ease-in;
   }
 
@@ -59,7 +56,7 @@ const Main = () => {
   const { open } = useSelector((state: RootState) => state.nav);
   const location = useLocation();
 
-  const nodeRef = useRef(null);
+  const nodeRef = useRef<HTMLInputElement>(null);
 
   return (
     <MainContainer open={open}>
@@ -71,9 +68,12 @@ const Main = () => {
           nodeRef={nodeRef}
         >
           <Routes location={location}>
-            <Route path="/" element={<Intro />} />
-            <Route path="/skill-career" element={<SkillAndCareer />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/" element={<Intro nodeRef={nodeRef} />} />
+            <Route
+              path="/skill-career"
+              element={<SkillAndCareer nodeRef={nodeRef} />}
+            />
+            <Route path="/projects" element={<Projects nodeRef={nodeRef} />} />
             <Route path="/*" element={<div>Not Found</div>} />
           </Routes>
         </CSSTransition>

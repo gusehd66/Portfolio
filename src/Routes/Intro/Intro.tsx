@@ -11,6 +11,7 @@ import ContentsBox from "../../component/Common/ContentsBox";
 import { Certificate, Contact, Profile } from "../../assets/data/data";
 import Container from "../../component/Common/Container";
 import profile from "../../assets/img/pp_profile.jpg";
+import { RefObject } from "react";
 
 export const IntroContainer = styled(Container)`
   > .medal {
@@ -116,9 +117,13 @@ const AboutBox = styled.div`
   width: 90%;
 `;
 
-const Intro = () => {
+interface Props {
+  nodeRef: RefObject<HTMLInputElement>;
+}
+
+const Intro = ({ nodeRef }: Props) => {
   return (
-    <IntroContainer>
+    <IntroContainer ref={nodeRef}>
       <div className="medal">
         <div className="hover-please">
           <FontAwesomeIcon icon={faArrowPointer} />

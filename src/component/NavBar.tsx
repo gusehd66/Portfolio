@@ -98,7 +98,7 @@ const MenuBtn = styled.button`
   z-index: 9;
 
   @media screen and (max-width: 720px) {
-    margin: 10px 0 10px 30px;
+    margin: 10px 0 10px 20px;
   }
 `;
 

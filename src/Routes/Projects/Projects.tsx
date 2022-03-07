@@ -1,10 +1,15 @@
+import { RefObject } from "react";
 import styled from "styled-components";
 import Container from "../../component/Common/Container";
 
 const ProjectsContainer = styled(Container)``;
 
-const Projects = () => {
-  return <ProjectsContainer>projects</ProjectsContainer>;
+interface Props {
+  nodeRef: RefObject<HTMLInputElement>;
+}
+
+const Projects = ({ nodeRef }: Props) => {
+  return <ProjectsContainer ref={nodeRef}>projects</ProjectsContainer>;
 };
 
 export default Projects;
