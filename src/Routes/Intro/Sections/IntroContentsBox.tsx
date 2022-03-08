@@ -1,6 +1,7 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import { UserModel } from "../../../assets/data/data";
 
 const Contents = styled.div`
   width: 100%;
@@ -80,11 +81,6 @@ const Contents = styled.div`
   }
 `;
 
-interface UserModel {
-  id: string;
-  value: string;
-}
-
 // 받을 props 타입
 interface Props {
   icon: IconProp;
@@ -93,17 +89,17 @@ interface Props {
   data: Array<UserModel>;
 }
 
-const ContentsBox = (props: Props) => {
+const IntroContentsBox = ({ icon, index, title, data }: Props) => {
   return (
     <Contents>
       <div className="contents-title">
         <p>
-          {props.index}. {props.title}
+          {index}. {title}
         </p>
-        <FontAwesomeIcon icon={props.icon} />
+        <FontAwesomeIcon icon={icon} />
       </div>
       <ul className="contents-details">
-        {props.data.map((user) => (
+        {data.map((user) => (
           <li key={user.id}>
             {user.id === "Github" || user.id === "Blog" ? (
               <a target="_blank" rel="noopener noreferrer" href={user.value}>
@@ -121,4 +117,4 @@ const ContentsBox = (props: Props) => {
   );
 };
 
-export default ContentsBox;
+export default IntroContentsBox;

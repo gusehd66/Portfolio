@@ -7,11 +7,12 @@ import {
   faAddressCard,
   faArrowPointer,
 } from "@fortawesome/free-solid-svg-icons";
-import ContentsBox from "../../component/Common/ContentsBox";
+import IntroContentsBox from "./Sections/IntroContentsBox";
 import { Certificate, Contact, Profile } from "../../assets/data/data";
 import Container from "../../component/Common/Container";
 import profile from "../../assets/img/pp_profile.jpg";
 import { RefObject } from "react";
+import Title from "../../component/Common/Title";
 
 export const IntroContainer = styled(Container)`
   > .medal {
@@ -82,34 +83,6 @@ export const IntroContainer = styled(Container)`
   }
 `;
 
-const AboutMe = styled.div`
-  width: 90%;
-  height: 56px;
-  font-size: 32px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  position: relative;
-  padding-left: 56px;
-  margin-bottom: 30px;
-  background-color: #ddd;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    left: 0px;
-    border-top: solid 4px #ddd;
-    border-bottom: solid 4px #ddd;
-  }
-  > svg {
-    color: #d8332d;
-  }
-  > p {
-    margin-left: 40px;
-  }
-`;
-
 const AboutBox = styled.div`
   display: flex;
   justify-content: center;
@@ -133,19 +106,24 @@ const Intro = ({ nodeRef }: Props) => {
           항상 어제보다 발전하는 프론트엔드 개발자가 되고 싶은 김현동입니다.
         </div>
       </div>
-      <AboutMe>
+      <Title>
         <FontAwesomeIcon icon={faBookmark} />
         <p>About Me</p>
-      </AboutMe>
+      </Title>
       <AboutBox>
-        <ContentsBox
+        <IntroContentsBox
           icon={faPhone}
           index={1}
           title={"Contact"}
           data={Contact}
         />
-        <ContentsBox icon={faUser} index={2} title={"Profile"} data={Profile} />
-        <ContentsBox
+        <IntroContentsBox
+          icon={faUser}
+          index={2}
+          title={"Profile"}
+          data={Profile}
+        />
+        <IntroContentsBox
           icon={faAddressCard}
           index={3}
           title={"Certificate"}
