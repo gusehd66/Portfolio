@@ -21,31 +21,35 @@ const MainContainer = styled.div<{ open: boolean }>`
   overflow-x: hidden;
   border-left: double 6px #000;
   box-sizing: border-box;
-
   .transition-group {
     position: relative;
   }
   .pageSlider-enter {
     opacity: 0;
-    transform-origin: 100% 0%;
     transform: rotateY(90deg);
+    transform-origin: 100% 0%;
     transition: all 0.5s ease-in;
+    height: 200vh;
+    overflow: hidden;
   }
   .pageSlider-enter-active {
     opacity: 1;
     transform: rotateY(0);
     transform-origin: 100% 0%;
     transition: all 0.5s ease-in;
+    z-index: 1;
+    background-color: #f4f4f4;
+    height: 200vh;
+    overflow: hidden;
   }
   .pageSlider-exit {
     opacity: 1;
     transition: all 0.5s ease-in;
+    z-index: 1;
+    background-color: #f4f4f4;
+    height: 200vh;
+    overflow: hidden;
   }
-  .pageSlider-exit-active {
-    opacity: 1;
-    transition: all 0.5s ease-in;
-  }
-
   @media screen and (max-width: 720px) {
     width: ${(props) => (props.open ? `calc(100% - 80px)` : "100%")};
     margin-left: ${(props) => (props.open ? "80px" : "0%")};
@@ -66,6 +70,7 @@ const Main = () => {
           classNames="pageSlider"
           timeout={500}
           nodeRef={nodeRef}
+          unmountOnExit
         >
           <Routes location={location}>
             <Route path="/" element={<Intro nodeRef={nodeRef} />} />
@@ -74,6 +79,7 @@ const Main = () => {
               element={<SkillAndCareer nodeRef={nodeRef} />}
             />
             <Route path="/projects" element={<Projects nodeRef={nodeRef} />} />
+            <Route path="/*" element={<div>Not Found</div>} />
             <Route path="/*" element={<div>Not Found</div>} />
           </Routes>
         </CSSTransition>
