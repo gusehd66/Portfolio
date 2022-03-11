@@ -13,6 +13,7 @@ import Container from "../../component/Common/Container";
 import profile from "../../assets/img/pp_profile.jpg";
 import { RefObject } from "react";
 import Title from "../../component/Common/Title";
+import NextPageBtn from "../../component/Common/NextPageBtn";
 
 export const IntroContainer = styled(Container)`
   > .medal {
@@ -130,6 +131,7 @@ const Intro = ({ nodeRef }: Props) => {
           data={Certificate}
         />
       </AboutBox>
+      <NextPageBtn link={"/skill-career"} />
     </IntroContainer>
   );
 };

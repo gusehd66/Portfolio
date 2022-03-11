@@ -12,11 +12,12 @@ import { RefObject } from "react";
 import styled from "styled-components";
 import { CareerData } from "../../assets/data/data";
 import Container from "../../component/Common/Container";
+import NextPageBtn from "../../component/Common/NextPageBtn";
 import Title from "../../component/Common/Title";
 import Career from "./Sections/Career";
 import SkillDetails from "./Sections/SkillDetails";
-const SACContainer = styled(Container)``;
 
+const SACContainer = styled(Container)``;
 const SACContentsBox = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +52,7 @@ const SkillAndCareer = ({ nodeRef }: Props) => {
       <SACContentsBox>
         <Career data={CareerData} />
       </SACContentsBox>
+      <NextPageBtn link={"/projects"} />
     </SACContainer>
   );
 };

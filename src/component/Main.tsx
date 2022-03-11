@@ -23,14 +23,16 @@ const MainContainer = styled.div<{ open: boolean }>`
   box-sizing: border-box;
   .transition-group {
     position: relative;
+    overflow: hidden;
   }
+  //pageSlider에 css 공통으로 주면 적용안됨
   .pageSlider-enter {
     opacity: 0;
     transform: rotateY(90deg);
     transform-origin: 100% 0%;
     transition: all 0.5s ease-in;
     height: 200vh;
-    overflow: hidden;
+    position: absolute;
   }
   .pageSlider-enter-active {
     opacity: 1;
@@ -40,7 +42,7 @@ const MainContainer = styled.div<{ open: boolean }>`
     z-index: 1;
     background-color: #f4f4f4;
     height: 200vh;
-    overflow: hidden;
+    position: absolute;
   }
   .pageSlider-exit {
     opacity: 1;
@@ -48,7 +50,7 @@ const MainContainer = styled.div<{ open: boolean }>`
     z-index: 1;
     background-color: #f4f4f4;
     height: 200vh;
-    overflow: hidden;
+    position: absolute;
   }
   @media screen and (max-width: 720px) {
     width: ${(props) => (props.open ? `calc(100% - 80px)` : "100%")};

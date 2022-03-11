@@ -9,10 +9,14 @@ const CareerContainer = styled.div`
   }
   > h4 {
     margin: 0 0 30px;
+    color: #555;
   }
   > .career-contents {
     display: flex;
     flex-direction: column;
+    &:nth-of-type(1) {
+      margin-bottom: 10px;
+    }
     > .career-title {
       font-size: 24px;
       font-weight: 600;

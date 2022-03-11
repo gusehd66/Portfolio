@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 40px 60px 40px;
-  position: absolute;
+  position: relative;
   margin-left: 3px;
   border-left: solid 2px #444;
   min-height: 100vh;
