@@ -8,6 +8,10 @@ const SkillDetailComponent = styled.div`
   width: 30%;
   align-items: center;
   margin: 10px;
+  transition: 0.4s;
+  &:hover {
+    transform: translateY(-4px);
+  }
   > svg {
     width: 100%;
     height: 100px;

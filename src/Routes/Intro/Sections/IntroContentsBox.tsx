@@ -74,6 +74,7 @@ const Contents = styled.div`
           left: -10px;
         }
         a::after {
+          //모바일은 문구 제거
           content: "";
         }
       }
