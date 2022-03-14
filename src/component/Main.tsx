@@ -5,6 +5,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 import { RootState } from "../redux/store/store";
 import Intro from "../Routes/Intro/Intro";
+import ProjectContainer from "../Routes/Projects/Outlet/ProjectContainer";
 import Projects from "../Routes/Projects/Projects";
 import SkillAndCareer from "../Routes/SkillAndCareer/SkillAndCareer";
 
@@ -80,8 +81,9 @@ const Main = () => {
               path="/skill-career"
               element={<SkillAndCareer nodeRef={nodeRef} />}
             />
-            <Route path="/projects" element={<Projects nodeRef={nodeRef} />} />
-            <Route path="/*" element={<div>Not Found</div>} />
+            <Route path="/projects" element={<Projects nodeRef={nodeRef} />}>
+              <Route path=":id" element={<ProjectContainer />} />
+            </Route>
             <Route path="/*" element={<div>Not Found</div>} />
           </Routes>
         </CSSTransition>

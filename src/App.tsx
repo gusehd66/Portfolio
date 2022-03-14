@@ -1,4 +1,4 @@
-import { BrowserRouter, Outlet } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 import Main from "./component/Main";
 import NavBar from "./component/NavBar";
@@ -16,7 +16,6 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Main />
-        <Outlet />
       </BrowserRouter>
     </AppContainer>
   );
