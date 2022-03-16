@@ -1,7 +1,9 @@
 import { RefObject } from "react";
+import { useSelector } from "react-redux";
 import { Link, Outlet, useParams } from "react-router-dom";
 import styled from "styled-components";
 import Container from "../../component/Common/Container";
+import { RootState } from "../../redux/store/store";
 
 const ProjectsContainer = styled(Container)`
   > .links {
@@ -35,28 +37,28 @@ interface Props {
 }
 
 const Projects = ({ nodeRef }: Props) => {
-  const { id } = useParams();
+  const { param } = useSelector((state: RootState) => state.project);
 
   return (
     <ProjectsContainer ref={nodeRef}>
       <div className="links">
         <h3>목차</h3>
-        <LinkBox to="1" selected={id === "1"}>
+        <LinkBox to="1" selected={param === 1}>
           Project 1
         </LinkBox>
-        <LinkBox to="2" selected={id === "2"}>
+        <LinkBox to="2" selected={param === 2}>
           Project 2
         </LinkBox>
 
-        <LinkBox to="3" selected={id === "3"}>
+        <LinkBox to="3" selected={param === 3}>
           Project 3
         </LinkBox>
 
-        <LinkBox to="4" selected={id === "4"}>
+        <LinkBox to="4" selected={param === 4}>
           Project 4
         </LinkBox>
 
-        <LinkBox to="5" selected={id === "5"}>
+        <LinkBox to="5" selected={param === 5}>
           Project 5
         </LinkBox>
       </div>
