@@ -5,7 +5,7 @@ type ParamState = {
 };
 
 export const initialState: ParamState = {
-  param: 1,
+  param: 0,
 };
 
 export const convertParam = (
