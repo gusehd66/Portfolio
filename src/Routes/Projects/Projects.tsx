@@ -1,8 +1,9 @@
-import { RefObject } from "react";
-import { useSelector } from "react-redux";
+import { RefObject, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, Outlet, useParams } from "react-router-dom";
 import styled from "styled-components";
 import Container from "../../component/Common/Container";
+import { projectActions } from "../../redux/store/project_reducer";
 import { RootState } from "../../redux/store/store";
 
 const ProjectsContainer = styled(Container)`
@@ -38,6 +39,17 @@ interface Props {
 
 const Projects = ({ nodeRef }: Props) => {
   const { param } = useSelector((state: RootState) => state.project);
+  const { id } = useParams();
+  const dispatch = useDispatch();
+
+  const idNumber = Number(id) || 0;
+
+  useEffect(() => {
+    setTimeout(
+      () => dispatch(projectActions.convertParam({ param: idNumber })),
+      300
+    );
+  }, [dispatch, idNumber]);
 
   return (
     <ProjectsContainer ref={nodeRef}>
