@@ -16,7 +16,7 @@ const ProjectContainer = () => {
   useEffect(() => {
     setTimeout(
       () => dispatch(projectActions.convertParam({ param: idNumber })),
-      300
+      400
     );
   }, [idNumber, dispatch]);
 
