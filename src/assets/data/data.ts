@@ -62,7 +62,14 @@ export const ProjectData: Array<ProjectModel> = [
       "등록한 옷을 가격별, 카테고리 별 또는 검색으로 찾을 수 있습니다.",
       "옷을 고르기 어려울때 간단하게 정해주는 랜덤선택 기능이 있습니다.",
     ],
-    images: ["test1", "test2", "test3", "test4"],
+    images: [
+      require("../img/OOTD/landing-filter.gif"),
+      require("../img/OOTD/random-select-page.gif"),
+      require("../img/OOTD/complete.JPG"),
+      require("../img/OOTD/detail-page.PNG"),
+      require("../img/OOTD/landing.JPG"),
+      require("../img/OOTD/select.JPG"),
+    ],
     skill: [
       "React",
       "Redux",
@@ -87,7 +94,11 @@ export const ProjectData: Array<ProjectModel> = [
       "초당 벌리는 금액을 실시간으로 확인할 수 있습니다.",
       "주급, 월급 등 다양한 비교를 할 수 있습니다.",
     ],
-    images: ["test1", "test2", "test3", "test4"],
+    images: [
+      require("../img/SalaryCalc/click-move.gif"),
+      require("../img/SalaryCalc/top.PNG"),
+      require("../img/SalaryCalc/bottom.PNG"),
+    ],
     skill: ["HTML", "CSS", "Vanilla JS"],
     desc: [
       "주변에 취업하는 친구들에게 보여주기 위해 만든 웹페이지 입니다.",
@@ -105,7 +116,12 @@ export const ProjectData: Array<ProjectModel> = [
       "음악 변경시 배경이 바뀝니다.",
       "To-do List 와 Complete List 가 구분되어 있습니다.",
     ],
-    images: ["test1", "test2", "test3", "test4"],
+    images: [
+      require("../img/TodoList/hover.gif"),
+      require("../img/TodoList/add-list.gif"),
+      require("../img/TodoList/landing.PNG"),
+      require("../img/TodoList/mobile.PNG"),
+    ],
     skill: ["HTML", "CSS", "Vanilla JS"],
     desc: [
       "Javascript 입문 당시 여러 API를 사용해보고, 인터랙티브한 웹을 만들고 싶어서 만든  Todo-list 입니다.",
@@ -124,11 +140,14 @@ export const ProjectData: Array<ProjectModel> = [
       "간단한 About 페이지",
       "반응형을 고려한 디자인",
     ],
-    images: ["test1", "test2", "test3", "test4"],
+    images: [
+      require("../img/Movie/click-detail.gif"),
+      require("../img/Movie/mobile.png"),
+      require("../img/Movie/pc.png"),
+    ],
     skill: ["React", "CSS"],
     desc: [
-      "처음으로 React를 사용하여 만든 PC와 모바일에 최적화된 SPA 입니다.",
-      "이 과정에서 React 문법을 익히고 React-router-dom 을 경험했습니다.",
+      "처음으로 React를 사용하여 만든 PC와 모바일에 최적화된 SPA 입니다. 이 과정에서 React 문법을 익히고 React-router-dom 을 경험했습니다.",
       "시계는 순수 자바스크립트로 구현하였으며, 이름과 Todo는 localstorage로 관리하였습니다.",
       "다른 프레임워크보다 React의 러닝커브가 높다는 얘기에 걱정하였지만, 완성을 하고 난 후 React에 대한 자신감과 흥미를 가지게 되었습니다.",
     ],
@@ -143,7 +162,12 @@ export const ProjectData: Array<ProjectModel> = [
       "Tweet 사진만 모아볼 수 있는 기능이 제공됩니다.",
       "Profile 사진과 닉네임을 설정할 수 있고, 자신이 쓴 트윗만 볼 수 있습니다.",
     ],
-    images: ["test1", "test2", "test3", "test4"],
+    images: [
+      require("../img/Twitter/realtime.gif"),
+      require("../img/Twitter/collect.gif"),
+      require("../img/Twitter/profile.gif"),
+      require("../img/Twitter/login.png"),
+    ],
     skill: ["React", "Firebase"],
     desc: [
       "React 를 복습하고자 만든 프로젝트 입니다.",

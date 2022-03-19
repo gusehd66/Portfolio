@@ -33,10 +33,7 @@ interface Props {
 const SkillAndCareer = ({ nodeRef }: Props) => {
   return (
     <SACContainer ref={nodeRef}>
-      <Title>
-        <FontAwesomeIcon icon={faBookmark} />
-        <p>Skills</p>
-      </Title>
+      <Title title={"Skills"} />
       <SACContentsBox>
         <SkillDetails icon={faHtml5} desc={"HTML"} color={"#f75421"} />
         <SkillDetails icon={faCss3} desc={"CSS"} color={"#2091eb"} />
@@ -45,10 +42,7 @@ const SkillAndCareer = ({ nodeRef }: Props) => {
         <SkillDetails icon={faSass} desc={"SASS"} color={"#c66394"} />
         <SkillDetails icon={faGitAlt} desc={"GIT"} color={"#eb4d28"} />
       </SACContentsBox>
-      <Title>
-        <FontAwesomeIcon icon={faBookmark} />
-        <p>Career</p>
-      </Title>
+      <Title title={"Career"} />
       <SACContentsBox>
         <Career data={CareerData} />
       </SACContentsBox>

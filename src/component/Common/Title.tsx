@@ -1,6 +1,8 @@
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
-const Title = styled.div`
+const TitleBox = styled.div`
   width: 90%;
   height: 56px;
   font-size: 32px;
@@ -25,7 +27,17 @@ const Title = styled.div`
   }
   > p {
     margin-left: 40px;
+    font-weight: 800;
   }
 `;
+
+const Title = ({ title }: { title: string }) => {
+  return (
+    <TitleBox>
+      <FontAwesomeIcon icon={faBookmark} />
+      <p>{title}</p>
+    </TitleBox>
+  );
+};
 
 export default Title;

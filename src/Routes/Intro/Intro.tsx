@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
-  faBookmark,
   faPhone,
   faAddressCard,
   faArrowPointer,
@@ -12,8 +11,8 @@ import { Certificate, Contact, Profile } from "../../assets/data/data";
 import Container from "../../component/Common/Container";
 import profile from "../../assets/img/pp_profile.jpg";
 import { RefObject } from "react";
-import Title from "../../component/Common/Title";
 import NextPageBtn from "../../component/Common/NextPageBtn";
+import Title from "../../component/Common/Title";
 
 export const IntroContainer = styled(Container)`
   > .medal {
@@ -107,10 +106,7 @@ const Intro = ({ nodeRef }: Props) => {
           항상 어제보다 발전하는 프론트엔드 개발자가 되고 싶은 김현동입니다.
         </div>
       </div>
-      <Title>
-        <FontAwesomeIcon icon={faBookmark} />
-        <p>About Me</p>
-      </Title>
+      <Title title={"About Me"} />
       <AboutBox>
         <IntroContentsBox
           icon={faPhone}
