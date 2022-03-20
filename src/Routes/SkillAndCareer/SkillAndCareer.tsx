@@ -6,8 +6,6 @@ import {
   faReact,
   faSass,
 } from "@fortawesome/free-brands-svg-icons";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RefObject } from "react";
 import styled from "styled-components";
 import { CareerData } from "../../assets/data/data";
