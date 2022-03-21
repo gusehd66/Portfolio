@@ -56,6 +56,7 @@ const ProjectContainer = () => {
   const createItem: Function = useCallback(
     (id: keyof ProjectModel, Tag: keyof JSX.IntrinsicElements) => {
       const arrayData = outletData[id];
+      console.log(arrayData);
       if (Array.isArray(arrayData)) {
         return (
           <>

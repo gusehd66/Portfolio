@@ -1,5 +1,3 @@
-import test from "../img/OOTD/landing-filter.gif";
-
 export interface UserModel {
   id: string;
   value: string;
@@ -65,12 +63,12 @@ export const ProjectData: Array<ProjectModel> = [
       "옷을 고르기 어려울때 간단하게 정해주는 랜덤선택 기능이 있습니다.",
     ],
     images: [
-      test,
-      require("../img/OOTD/random-select-page.gif").default,
-      require("../img/OOTD/complete.JPG"),
-      require("../img/OOTD/detail-page.PNG"),
-      require("../img/OOTD/landing.JPG"),
-      require("../img/OOTD/select.JPG"),
+      "/asset/OOTD/ootd-landing-filter.gif",
+      "/asset/OOTD/ootd-random-select-page.gif",
+      "/asset/OOTD/ootd-complete.JPG",
+      "/asset/OOTD/ootd-detail-page.PNG",
+      "/asset/OOTD/ootd-landing.JPG",
+      "/asset/OOTD/ootd-select.JPG",
     ],
     skill: [
       "React",
@@ -97,9 +95,9 @@ export const ProjectData: Array<ProjectModel> = [
       "주급, 월급 등 다양한 비교를 할 수 있습니다.",
     ],
     images: [
-      require("../img/SalaryCalc/click-move.gif"),
-      require("../img/SalaryCalc/top.PNG"),
-      require("../img/SalaryCalc/bottom.PNG"),
+      "/asset/SalaryCalc/click-move.gif",
+      "/asset/SalaryCalc/top.PNG",
+      "/asset/SalaryCalc/bottom.PNG",
     ],
     skill: ["HTML", "CSS", "Vanilla JS"],
     desc: [
@@ -119,10 +117,10 @@ export const ProjectData: Array<ProjectModel> = [
       "To-do List 와 Complete List 가 구분되어 있습니다.",
     ],
     images: [
-      require("../img/TodoList/hover.gif"),
-      require("../img/TodoList/add-list.gif"),
-      require("../img/TodoList/landing.PNG"),
-      require("../img/TodoList/mobile.PNG"),
+      "/asset/TodoList/hover.gif",
+      "/asset/TodoList/add-list.gif",
+      "/asset/TodoList/landing.PNG",
+      "/asset/TodoList/mobile.PNG",
     ],
     skill: ["HTML", "CSS", "Vanilla JS"],
     desc: [
@@ -143,9 +141,9 @@ export const ProjectData: Array<ProjectModel> = [
       "반응형을 고려한 디자인",
     ],
     images: [
-      require("../img/Movie/click-detail.gif"),
-      require("../img/Movie/mobile.png"),
-      require("../img/Movie/pc.png"),
+      "/asset/Movie/movie-click-detail.gif",
+      "/asset/Movie/movie-mobile.png",
+      "/asset/Movie/movie-pc.png",
     ],
     skill: ["React", "CSS"],
     desc: [
@@ -165,10 +163,10 @@ export const ProjectData: Array<ProjectModel> = [
       "Profile 사진과 닉네임을 설정할 수 있고, 자신이 쓴 트윗만 볼 수 있습니다.",
     ],
     images: [
-      require("../img/Twitter/realtime.gif"),
-      require("../img/Twitter/collect.gif"),
-      require("../img/Twitter/profile.gif"),
-      require("../img/Twitter/login.png"),
+      "/asset/Twitter/realtime.gif",
+      "/asset/Twitter/collect.gif",
+      "/asset/Twitter/profile.gif",
+      "/asset/Twitter/login.png",
     ],
     skill: ["React", "Firebase"],
     desc: [
