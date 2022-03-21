@@ -1,3 +1,5 @@
+import test from "../img/OOTD/landing-filter.gif";
+
 export interface UserModel {
   id: string;
   value: string;
@@ -63,8 +65,8 @@ export const ProjectData: Array<ProjectModel> = [
       "옷을 고르기 어려울때 간단하게 정해주는 랜덤선택 기능이 있습니다.",
     ],
     images: [
-      require("../img/OOTD/landing-filter.gif"),
-      require("../img/OOTD/random-select-page.gif"),
+      test,
+      require("../img/OOTD/random-select-page.gif").default,
       require("../img/OOTD/complete.JPG"),
       require("../img/OOTD/detail-page.PNG"),
       require("../img/OOTD/landing.JPG"),
