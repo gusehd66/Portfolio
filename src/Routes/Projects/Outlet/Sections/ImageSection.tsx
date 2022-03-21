@@ -1,4 +1,5 @@
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import styled from "styled-components";
@@ -80,10 +81,11 @@ const ImageSection = ({
       <div className="imageBox">{createItem("images", "img")}</div>
       <div className="imgControlBox">
         <button onClick={() => handleClick("prev")}>
-          <FontAwesomeIcon icon={faAngleLeft} />
+          <FontAwesomeIcon icon={faAngleLeft as IconProp} />
+          {/* <FontAwesomeIcon icon="fa-solid fa-angle-left" /> */}
         </button>
         <button onClick={() => handleClick("next")}>
-          <FontAwesomeIcon icon={faAngleRight} />
+          <FontAwesomeIcon icon={faAngleRight as IconProp} />
         </button>
       </div>
     </ImageContainer>

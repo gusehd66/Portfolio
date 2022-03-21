@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { navActions } from "../redux/store/nav_reducer";
 import { RootState } from "../redux/store/store";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 const NavContainer = styled.div<{ open: boolean }>`
   width: ${(props) => (props.open ? "180px" : "0")};
@@ -113,7 +114,7 @@ const NavBar = () => {
   return (
     <>
       <MenuBtn onClick={toggleNav}>
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon icon={faBars as IconProp} />
       </MenuBtn>
       <NavContainer open={open}>
         <NavLink to={"/"}>Intro</NavLink>

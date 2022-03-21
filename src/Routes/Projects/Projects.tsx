@@ -1,37 +1,13 @@
 import { RefObject, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Outlet, useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import styled from "styled-components";
 import Container from "../../component/Common/Container";
 import { projectActions } from "../../redux/store/project_reducer";
 import { RootState } from "../../redux/store/store";
+import ProjectMain from "./ProjectMain/ProjectMain";
 
-const ProjectsContainer = styled(Container)`
-  > .links {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 60px;
-    text-align: left;
-    > h3 {
-      margin: 0;
-      text-align: center;
-    }
-  }
-`;
-
-const LinkBox = styled(Link)<{ selected: boolean }>`
-  color: ${(props) => (props.selected ? "#a52a2a" : "#4f4f4f")};
-  font-weight: ${(props) => (props.selected ? "bold" : "normal")};
-  list-style: none;
-  text-decoration: none;
-  &::before {
-    content: "ㅡ";
-    position: relative;
-    left: -5px;
-    border-left: solid 1px #000;
-  }
-`;
+const ProjectsContainer = styled(Container)``;
 
 interface Props {
   nodeRef: RefObject<HTMLInputElement>;
@@ -45,35 +21,16 @@ const Projects = ({ nodeRef }: Props) => {
   const idNumber = Number(id) || 0;
 
   useEffect(() => {
-    setTimeout(
+    const page = setTimeout(
       () => dispatch(projectActions.convertParam({ param: idNumber })),
       300
     );
+    return () => clearTimeout(page);
   }, [dispatch, idNumber]);
 
   return (
     <ProjectsContainer ref={nodeRef}>
-      <div className="links">
-        <h3>목차</h3>
-        <LinkBox to="1" selected={param === 1}>
-          Project 1
-        </LinkBox>
-        <LinkBox to="2" selected={param === 2}>
-          Project 2
-        </LinkBox>
-
-        <LinkBox to="3" selected={param === 3}>
-          Project 3
-        </LinkBox>
-
-        <LinkBox to="4" selected={param === 4}>
-          Project 4
-        </LinkBox>
-
-        <LinkBox to="5" selected={param === 5}>
-          Project 5
-        </LinkBox>
-      </div>
+      {!id && <ProjectMain />}
       <Outlet />
     </ProjectsContainer>
   );

@@ -1,3 +1,4 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,7 +42,7 @@ const LinkSection = ({ github, demo }: { github: string; demo: string }) => {
         </a>
       </div>
       <div>
-        <FontAwesomeIcon icon={faLink} />
+        <FontAwesomeIcon icon={faLink as IconProp} />
         <span>Demo : </span>
         <a href={demo} target="_blank" rel="noreferrer">
           {demo}

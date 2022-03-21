@@ -13,6 +13,7 @@ import profile from "../../assets/img/pp_profile.jpg";
 import { RefObject } from "react";
 import NextPageBtn from "../../component/Common/NextPageBtn";
 import Title from "../../component/Common/Title";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export const IntroContainer = styled(Container)`
   > .medal {
@@ -99,7 +100,7 @@ const Intro = ({ nodeRef }: Props) => {
     <IntroContainer ref={nodeRef}>
       <div className="medal">
         <div className="hover-please">
-          <FontAwesomeIcon icon={faArrowPointer} />
+          <FontAwesomeIcon icon={faArrowPointer as IconProp} />
         </div>
         <img className="medal-item front" src={profile} alt="profile" />
         <div className="medal-item back">
@@ -109,19 +110,19 @@ const Intro = ({ nodeRef }: Props) => {
       <Title title={"About Me"} />
       <AboutBox>
         <IntroContentsBox
-          icon={faPhone}
+          icon={faPhone as IconProp}
           index={1}
           title={"Contact"}
           data={Contact}
         />
         <IntroContentsBox
-          icon={faUser}
+          icon={faUser as IconProp}
           index={2}
           title={"Profile"}
           data={Profile}
         />
         <IntroContentsBox
-          icon={faAddressCard}
+          icon={faAddressCard as IconProp}
           index={3}
           title={"Certificate"}
           data={Certificate}

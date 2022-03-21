@@ -1,3 +1,4 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
@@ -34,7 +35,7 @@ const TitleBox = styled.div`
 const Title = ({ title }: { title: string }) => {
   return (
     <TitleBox>
-      <FontAwesomeIcon icon={faBookmark} />
+      <FontAwesomeIcon icon={faBookmark as IconProp} />
       <p>{title}</p>
     </TitleBox>
   );

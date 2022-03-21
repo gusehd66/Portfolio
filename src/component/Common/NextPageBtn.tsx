@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { NextPageBtnTypes } from "../types/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 
 const NextBtn = styled.div`
@@ -53,7 +54,7 @@ const NextPageBtn = ({ link }: NextPageBtnTypes) => {
 
   return (
     <NextBtn>
-      <FontAwesomeIcon icon={faBookOpen} onClick={handleNext} />
+      <FontAwesomeIcon icon={faBookOpen as IconProp} onClick={handleNext} />
       <p>next</p>
     </NextBtn>
   );
