@@ -16,6 +16,9 @@ const ProjectMainContainer = styled.div`
   align-items: center;
   padding: 50px;
   box-sizing: border-box;
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
   > .contents {
     width: 70%;
     display: flex;
@@ -48,6 +51,10 @@ const ProjectList = styled.ul`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      transition: 0.3s;
+      &:hover {
+        color: #d8332d;
+      }
       > p {
         flex: 1;
         margin: 20px 10px;
@@ -55,9 +62,11 @@ const ProjectList = styled.ul`
         position: relative;
         font-size: 22px;
         &::after {
-          content: "------------------------";
+          content: "";
           position: absolute;
           width: 100%;
+          top: 50%;
+          border: dashed 1px #000;
           transform: translateX(16px);
         }
       }

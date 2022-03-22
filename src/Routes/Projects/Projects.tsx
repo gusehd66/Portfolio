@@ -6,9 +6,7 @@ import Container from "../../component/Common/Container";
 import { projectActions } from "../../redux/store/project_reducer";
 import ProjectMain from "./ProjectMain/ProjectMain";
 
-const ProjectsContainer = styled(Container)`
-  justify-content: center;
-`;
+const ProjectsContainer = styled(Container)``;
 
 interface Props {
   nodeRef: RefObject<HTMLInputElement>;
