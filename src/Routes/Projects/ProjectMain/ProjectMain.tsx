@@ -18,6 +18,7 @@ const ProjectMainContainer = styled.div`
   box-sizing: border-box;
   position: absolute;
   top: 50vh;
+  box-shadow: 8px 8px 8px #444;
   transform: translateY(-50%);
   > .contents {
     width: 70%;
@@ -33,6 +34,15 @@ const ProjectMainContainer = styled.div`
       background-color: #444;
       color: #fff;
       margin-right: 10px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 80%;
+    padding: 30px;
+    height: 70vh;
+    > .contents {
+      width: 90%;
     }
   }
 `;
@@ -68,6 +78,19 @@ const ProjectList = styled.ul`
           top: 50%;
           border: dashed 1px #000;
           transform: translateX(16px);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    width: 100%;
+    padding-left: 20px;
+    > a {
+      > li {
+        font-size: 16px;
+        line-height: 1.4em;
+        > p {
+          font-size: 17px;
         }
       }
     }

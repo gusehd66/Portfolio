@@ -29,6 +29,14 @@ const TitleBox = styled.div`
   > p {
     margin-left: 40px;
     font-weight: 800;
+    width: 100%;
+  }
+  @media screen and (max-width: 720px) {
+    font-size: 28px;
+    > p {
+      font-size: 22px;
+      margin-left: 25px;
+    }
   }
 `;
 
