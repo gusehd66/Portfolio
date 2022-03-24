@@ -82,7 +82,6 @@ const ImageSection = ({
       <div className="imgControlBox">
         <button onClick={() => handleClick("prev")}>
           <FontAwesomeIcon icon={faAngleLeft as IconProp} />
-          {/* <FontAwesomeIcon icon="fa-solid fa-angle-left" /> */}
         </button>
         <button onClick={() => handleClick("next")}>
           <FontAwesomeIcon icon={faAngleRight as IconProp} />

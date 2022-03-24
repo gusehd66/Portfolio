@@ -9,7 +9,7 @@ const LinkContainer = styled.div`
   width: 100%;
   flex-direction: column;
   > h3 {
-    margin: 0 0 0px 0;
+    margin: 0;
   }
   > div {
     font-size: 18px;

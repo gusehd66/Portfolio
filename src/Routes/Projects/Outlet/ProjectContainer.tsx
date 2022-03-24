@@ -2,31 +2,21 @@ import { useCallback } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { ProjectData, ProjectModel } from "../../../assets/data/data";
-import { Link } from "react-router-dom";
+
 import Title from "../../../component/Common/Title";
 import { RootState } from "../../../redux/store/store";
 import ImageSection from "./Sections/ImageSection";
-import LinkSection from "./Sections/LinkSection";
+import ProjectLinks from "./Sections/ProjectLinks";
+import LinkSection from "./Sections/RefLinkSection";
 
 const OutletContainer = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
   > h4 {
     margin: 0;
-  }
-  > .links {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 60px;
-    text-align: left;
-    > h3 {
-      margin: 0;
-      text-align: center;
-    }
   }
 
   > .descBox,
@@ -34,7 +24,7 @@ const OutletContainer = styled.div`
     width: 100%;
     margin-bottom: 10px;
     > p {
-      margin: 0 0 8px 0;
+      margin: 0 0 4px 0;
       line-height: 1.4rem;
     }
     > div {
@@ -56,19 +46,6 @@ const OutletContainer = styled.div`
       font-weight: bold;
       margin: 0 0 8px 0;
     }
-  }
-`;
-
-const LinkBox = styled(Link)<{ selected: boolean }>`
-  color: ${(props) => (props.selected ? "#a52a2a" : "#4f4f4f")};
-  font-weight: ${(props) => (props.selected ? "bold" : "normal")};
-  list-style: none;
-  text-decoration: none;
-  &::before {
-    content: "ㅡ";
-    position: relative;
-    left: -5px;
-    border-left: solid 1px #000;
   }
 `;
 
@@ -100,24 +77,7 @@ const ProjectContainer = () => {
 
   return (
     <OutletContainer>
-      <div className="links">
-        <h3>목차</h3>
-        <LinkBox to="../1" selected={param === 1}>
-          Project 1
-        </LinkBox>
-        <LinkBox to="../2" selected={param === 2}>
-          Project 2
-        </LinkBox>
-        <LinkBox to="../3" selected={param === 3}>
-          Project 3
-        </LinkBox>
-        <LinkBox to="../4" selected={param === 4}>
-          Project 4
-        </LinkBox>
-        <LinkBox to="../5" selected={param === 5}>
-          Project 5
-        </LinkBox>
-      </div>
+      <ProjectLinks param={param} />
       <Title title={outletData.title} />
       <h4>{outletData.intro}</h4>
       <ul>{createItem("implement", "li")}</ul>
