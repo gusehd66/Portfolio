@@ -10,7 +10,7 @@ const ProjectMainContainer = styled.div`
   border: solid 4px #444;
   overflow: hidden;
   width: 50%;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +54,7 @@ const ProjectList = styled.ul`
   > a {
     text-decoration: none;
     > li {
-      line-height: 1.6em;
+      line-height: 1.6rem;
       font-size: 25px;
       font-weight: 600;
       color: #222;
